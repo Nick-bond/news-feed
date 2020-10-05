@@ -27,7 +27,7 @@ function Main() {
       <div className="thumb-wrapper">
         {
           posts.map((item) => (
-            <ThumbPost
+            <ThumbPost key={item.id}
               post={item}
               removePost={showDialogRemovePost}
             />

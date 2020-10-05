@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function DeletePost({closeDialog, remove }) {
   return(
-    <div className="modal" tabIndex="-1">
-      <div className="modal-dialog">
+    <div className="modal" data-backdrop="static" data-keyboard="false" tabIndex="-1"  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title">Remove post</h5>
@@ -22,6 +23,16 @@ function DeletePost({closeDialog, remove }) {
       </div>
     </div>
   )
+};
+
+DeletePost.propTypes = {
+  closeDialog: PropTypes.func,
+  remove: PropTypes.func,
+};
+
+DeletePost.defaultTypes = {
+  closeDialog: () => {},
+  remove: () => {},
 };
 
 export default DeletePost;

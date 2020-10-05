@@ -3,7 +3,7 @@ import actionTypes from '../constants/action-types';
 
 describe('fetchPosts', () => {
   it('should return correct action', () => {
-    expect(redirectToStore()).toEqual({
+    expect(fetchPosts()).toEqual({
       type: actionTypes.FETCH_POSTS,
     });
   });

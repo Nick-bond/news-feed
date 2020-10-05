@@ -35,6 +35,15 @@ body {
   margin-bottom: 10px;
 }
 
+.single-post {
+  margin: 50px 0;
+  width: 70%;
+}
+
+.single-post .description {
+  margin: 40px 0;
+}
+
 
 .thumb {
   border: 2px solid #e7e7e7;
@@ -43,6 +52,11 @@ body {
   text-decoration: none;
   color: #000;
   position: relative;
+  cursor: pointer;
+}
+
+.thumb:hover {
+  text-decoration: none;
 }
 
 .thumb .btn {
@@ -57,6 +71,7 @@ body {
 
 .modal {
   display: block;
+  background: rgba(0, 0, 0, .7);
 }
 
 

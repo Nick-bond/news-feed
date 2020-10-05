@@ -14,7 +14,7 @@ describe('postList', () => {
     });
 
     it('should return previous state', () => {
-      expect(notifications(state, action)).toBe(state);
+      expect(postList(state, action)).toBe(state);
     });
   });
 
@@ -25,8 +25,35 @@ describe('postList', () => {
       action = {
         type: actionTypes.SET_POST_TO_STORE,
         payload: {
-          title: 'Test',
-          description: 'something',
+          data: [
+            {
+              title: 'Test',
+              description: 'some text',
+            }
+          ]
+        },
+      };
+    });
+
+    it('should set post list', () => {
+      expect(postList(state, action)).not.toBe(state);
+      expect(postList(state, action)).toEqual(action.payload.data);
+    });
+  });
+
+  describe(`when action is ${actionTypes.UPDATE_POST}`, () => {
+    beforeEach(() => {
+      state = [];
+
+      action = {
+        type: actionTypes.UPDATE_POST,
+        payload: {
+          data: [
+            {
+              title: 'Test',
+              description: 'some text',
+            }
+          ]
         },
       };
     });

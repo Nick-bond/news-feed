@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 function ThumbPost({ post, removePost}) {
   const {title, text, id} = post;
+  const shortDescription = text.substring(0, 140);
   return (
     <Link to={`/post/${id}`} className="thumb">
       <div className="description">
         <div className="description-title">{title}</div>
-        <div className="description-text">{text}</div>
+        <div className="description-text">{shortDescription}</div>
       </div>
       <div className="btn btn-danger" onClick={(e) => {
         e.preventDefault();

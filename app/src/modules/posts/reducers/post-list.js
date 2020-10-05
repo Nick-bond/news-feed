@@ -9,6 +9,12 @@ const postList = (state = initData, action) => {
         ...action.payload.data,
       ];
     }
+    case actionTypes.UPDATE_POST: {
+      return [
+        ...action.payload.data,
+      ];
+    }
+
     default: {
       return state;
     }

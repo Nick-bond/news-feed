@@ -5,9 +5,11 @@ describe('setPosts', () => {
   it('should return correct action', () => {
     const data = ['uuid1'];
 
-    expect(addPageUsedBlock(pageId, blockId)).toEqual({
+    expect(setPosts(data)).toEqual({
       type: actionTypes.SET_POST_TO_STORE,
-      payload: data,
+      payload: {
+        data,
+      },
     });
   });
 });
