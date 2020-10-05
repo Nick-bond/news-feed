@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  background: var(--main-bg-color);
+  flex-direction: column;
+  flex: 1;
+}
+
+.main-content {
+  width: 80%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.thumb-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 389px);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.description {
+  text-align: left;
+}
+.description-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.single-post {
+  margin: 50px 0;
+  width: 70%;
+}
+
+.single-post .description {
+  margin: 40px 0;
+}
+
+
+.thumb {
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.thumb:hover {
+  text-decoration: none;
+}
+
+.thumb .btn {
+  margin-top: 40px;
+}
+
+.add-new-post {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+.modal {
+  display: block;
+  background: rgba(0, 0, 0, .7);
+}
+
+
+@media screen and (max-width: 600px) {
+
+}
+

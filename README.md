@@ -1,2 +1,5 @@
-# news-feed
-News feed
+# News Feed
+
+#### For local development run 
+
+`npm run dev`
