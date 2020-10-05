@@ -9,6 +9,7 @@ function Header() {
         <Link to="/">
           <img className="logo" src={logo} alt="News Feed logo" />
         </Link>
+        <Link className="btn btn-primary" to="/add-new-post">Add new post</Link>
       </div>
     </header>
   );

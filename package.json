@@ -1,0 +1,47 @@
+{
+  "name": "general-aviation",
+  "version": "1.0.0",
+  "description": "General aviation",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "heroku-prebuild": "npm install --prefix client",
+    "heroku-postbuild": "npm run build --prefix client",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "client-install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-bond/general-aviation.git"
+  },
+  "keywords": [
+    "aviation",
+    "general",
+    "aviation",
+    "aircraft"
+  ],
+  "author": "Nick Bond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-bond/general-aviation/issues"
+  },
+  "homepage": "https://github.com/Nick-bond/general-aviation#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}

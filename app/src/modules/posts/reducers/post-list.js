@@ -6,7 +6,7 @@ const postList = (state = initData, action) => {
   switch (action.type) {
     case actionTypes.SET_POST_TO_STORE: {
       return [
-        action.payload.data,
+        ...action.payload.data,
       ];
     }
     default: {

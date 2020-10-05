@@ -1,8 +1,15 @@
 import { createStore, applyMiddleware } from 'redux';
-import reducer from '../reducer';
-import middleware from '../middleware';
-import connector from './connector';
 
-const store = createStore(reducer, connector, applyMiddleware(...middleware));
+import rootReducer from '../reducer';
+import middleware from '../middleware';
+import connectedStore from './connected-store';
+import history from '../browser-history';
+
+const store = createStore(
+  rootReducer(history),
+  applyMiddleware(...middleware)
+);
+
+connectedStore.set(store);
 
 export default store;

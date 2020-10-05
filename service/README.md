@@ -1,15 +1,15 @@
-# News Feed API
+# News Feed API endpoints
 
 ### ADD new post 
-`/post/add` 
+`/api/post/add` 
 body post request should contain `str: title` and `str: text`
 
 ### Get all items
-`/posts`
+`/api/posts`
 
 ### Remove post 
 
-`/delete` 
+`/api/delete` 
 body post request should contain `str: id` for remove post from BD
 
 
